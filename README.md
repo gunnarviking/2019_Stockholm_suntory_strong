@@ -1,19 +1,19 @@
-#TEAM NAME: Suntory Strong
+# TEAM NAME: Suntory Strong
 CHOSEN CASE: Röda Korset
 
 
-#Short Description: 
+# Short Description: 
 Purpose: Simplify the work for the officers on duty to quickly identify any relevant events for Röda Korset Sverige, where they might need to act and initiate a crisis operation.
 Feature: Gathers information from multiple sources, filter the data and present information and events that may be relevant for Röda Korset Sverige in their crisis readiness.
 Data Sources: Local news sites, police events, NewsAPI.	
 
-#Servies Used: Azure Text Analytics Service
+# Servies Used: Azure Text Analytics Service
 NewsAPI
 Polisen.se API
 Webscreaper
 
 
-#Programming languages used: Python, Node.js
+# Programming languages used: Python, Node.js
 
 #Team Members: 
 David Lindahl
@@ -21,9 +21,9 @@ Olof Spångö
 Michael Thompson
 
 
-#MIT License
+# MIT License
 
-#Copyright (c) 2019 Stockholm Openhack 19 Team Suntory Strong
+# Copyright (c) 2019 Stockholm Openhack 19 Team Suntory Strong
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
