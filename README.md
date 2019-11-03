@@ -13,17 +13,18 @@ Polisen.se API
 Webscreaper
 
 
-# Programming languages used: Python, Node.js
+# Programming languages used:
+## Python, Node.js
 
-#Team Members: 
+# Team Members: 
 David Lindahl
 Olof Spångö
 Michael Thompson
 
 
-# MIT License
+### MIT License
 
-# Copyright (c) 2019 Stockholm Openhack 19 Team Suntory Strong
+### Copyright (c) 2019 Stockholm Openhack 19 Team Suntory Strong
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
