@@ -1,0 +1,18 @@
+{
+	"information": {
+		"title": "Title, eg title for article or TWEET",
+		"text": "content....",
+		"imgUrl": "https://....",
+		"orignalSource": "https//.....",
+		"location": "Preferably gps coordinate"
+	},
+	"keyWords": [{
+		"keyWord": "Word Found",
+		"hits": "# of hits"
+	}],
+	"category": {
+		"tag": "From which service",
+		"category": "General Category eg, news, social media"
+	},
+	"datetime": "UTC-time (ISO8601)"
+}
