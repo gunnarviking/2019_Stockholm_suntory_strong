@@ -31,6 +31,15 @@
       .link:hover {
         color: black;
       }
+      .category:hover {
+        color: grey;
+      }
+      .categoryActive {
+        color: black;
+      }
+      .categoryDeactive {
+        color: grey; 
+      }
       .image {
         width: 30px;
         height: 40px;
@@ -47,13 +56,18 @@
         <div class="col-lg-6 col-md-12" id="feed">
           
           <div class="row feedTitle">
+            <div class="col-2">
+                <h4 class="category" id="police" onclick="toggle('police')">Polis</h4>
+            </div>  
+            <div class="col-2">
+                <h4 class="category" id="news" onclick="toggle('news')">Nyheter</h4>
+            </div>
             <div class="col">
-              <h3>Flöde</h3>
             </div>
           </div>
           
           {% for entry in entries %}
-            <div class="row entry">
+            <div class="row entry {{ entry['classCss'] }}">
               <div class="col-1">
                   <img class="image" src="{{ entry['path_image'] }}"></img>   
               </div>
@@ -84,7 +98,7 @@
             </div>
 
             <!-- Add space between entries -->
-            <div class="row"> 
+            <div class="row {{ entry['classCss'] }}"> 
                 <div class="col-12" style="height: 10px;"></div>
             </div>
           {% endfor %}  
@@ -95,9 +109,75 @@
   </div>
 
     <!-- Optional JavaScript -->
+    <script>
+      var police = true;
+      var news = true;
+      
+      function getDisplayValue(status) {
+        var value;
+        if (status == true) {
+          value = "none";
+        } else {
+          value = "block";
+        }
+        return value;
+      }
+
+      function getColor(status) {
+        var color;
+        if (status == true) {
+          value = "grey";
+        } else {
+          value = "black";
+        }
+        return value;
+      }
+
+      function toggle(type) {
+        var status = false;
+        if (type == "police") {
+          var header = document.getElementById("police");
+          status = police;
+          var entries = document.getElementsByClassName("police");
+          var value = getDisplayValue(status)
+          var colorValue = getColor(status)
+          header.style.color = colorValue;
+
+          for (i = 0; i < entries.length; i++) {
+              entries[i].style.display = value; 
+          }
+
+          if (status == false) {
+            police = true
+          } else {
+            police = false
+          }
+        } else {
+          var header = document.getElementById("news");
+          status = news;
+          var entries = document.getElementsByClassName("news");
+          var value = getDisplayValue(status)
+          var colorValue = getColor(status)
+          header.style.color = colorValue;
+
+          for (i = 0; i < entries.length; i++) {
+              entries[i].style.display = value; 
+          }
+
+          if (status == false) {
+            news = true
+          } else {
+            news = false
+          }
+        }
+
+
+      }
+    </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+ 
   </body>
 </html>
